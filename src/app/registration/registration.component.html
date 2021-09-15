@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center align-items-center mt-5 mb-3">
+    <div>
+        <p class="text-style">Sign up and get started</p>
+        <form *ngIf="!isSuccessful" #signup="ngForm" (ngSubmit)="onClickSubmit(signup.value)">
+            <div class="mb-3">
+                <label for="name" class="form-label f-style">Username <span class="text-danger"> *</span></label>
+                <input type="text" class="form-control" id="name" name="name" ngModel #name="ngModel" placeholder="Enter full name" aria-describedby="emailHelp" required>
+                <span class="help-block text-danger" *ngIf="!name.valid && name.touched">Please enter a name</span>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label f-style">Password <span class="text-danger"> *</span></label>
+                <input type="password" class="form-control" id="password" name="password" ngModel #password="ngModel" minlength="6" required>
+            </div>
+            <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="text-danger">
+                <div *ngIf="password.errors.required">
+                    Password is required
+                </div>
+                <div *ngIf="password.errors.minlength">
+                    Password Minimum Length is {{password.errors.minlength?.requiredLength}}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-reg" [disabled]="!signup.valid">Submit</button>
+            <div class="alert alert-warning" *ngIf="signup.submitted && isSignUpFailed">
+                Signup failed!<br />{{ errorMsg }}
+            </div>
+        </form>
+        <div class="alert alert-success" *ngIf="isSuccessful">
+            Your registration is successful!
+        </div>
+    </div>
+</div>

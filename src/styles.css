@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+#heading {
+  color: #ff0833;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+nav {
+  border-bottom: 1px solid rgba(32, 33, 36, 0.28);
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.nav-item:hover .nav-link {
+  color: #ff0833;
+}
+
+.nav-link {
+  color: #272343;
+  font-family: "Abril Fatface", cursive;
+  font-weight: 400;
+}
+
+.text-style {
+  color: #ff0833;
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
+}
+
+.btn-reg {
+  background-color: #ff0833;
+  color: #fff;
+}
+
+.f-style {
+  color: #272343;
+  font-family: "Abril Fatface", cursive;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
