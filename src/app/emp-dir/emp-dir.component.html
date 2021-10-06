@@ -1,0 +1,28 @@
+<div class="mt-5 justify-content-end">
+    <div class="form-group">
+        <label for="search" class="filter-text">Filter table</label>
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+    </div>
+</div>
+<hr>
+<table class="table table-hover">
+    <thead class="bg-table">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Job</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Department</th>
+        </tr>
+    </thead>
+    <tbody class="table-body">
+        <tr *ngFor="let data of empData | filter:filterTerm">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.job_description}}</td>
+            <td>{{data.salary}}</td>
+            <td>{{data.department}}</td>
+        </tr>
+        
+    </tbody>
+</table>

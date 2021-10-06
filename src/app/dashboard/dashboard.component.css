@@ -1,0 +1,18 @@
+.background-sidebar {
+  background-color: #ff0833;
+  padding: 1em;
+  color: #fff;
+  font-family: "Abril Fatface", cursive;
+  height: 100vh;
+}
+
+.background-dash {
+  background-color: #f0f0f1;
+  padding: 1em;
+  font-family: "Abril Fatface", cursive;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}

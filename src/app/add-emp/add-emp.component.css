@@ -1,0 +1,10 @@
+button:hover {
+  color: #ff0833;
+  border: 1px solid #ff0833;
+  background-color: #fff;
+}
+
+.font-style {
+  color: #ff0833;
+  font-family: "Abril Fatface", cursive;
+}

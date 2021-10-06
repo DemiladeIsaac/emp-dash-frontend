@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="mt-5 mb-3 white-card">
+        <form #updateEmp="ngForm" (ngSubmit)="onSubmit(updateEmp.value)" *ngIf="!isSuccessful">
+            <div class="mb-3">
+                <label for="name" class="form-label font-style">Name <span class="text-danger"> *</span></label>
+                <input type="text" class="form-control" id="name" name="name" ngModel #name="ngModel"
+                     aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label font-style">Age<span class="text-danger"> *</span></label>
+                <input type="text" class="form-control" id="age" name="age" ngModel #age="ngModel" required>
+            </div>
+            <div class="mb-3">
+                <label for="job_description" class="form-label font-style">Job Description<span class="text-danger">
+                        *</span></label>
+                <input type="text" class="form-control" id="job_description" name="job_description" ngModel
+                    #job_description="ngModel" required>
+            </div>
+            <div class="mb-3">
+                <label for="salary" class="form-label font-style">Salary<span class="text-danger"> *</span></label>
+                <input type="text" class="form-control" id="salary" name="salary" ngModel #salary="ngModel" required>
+            </div>
+            <div class="mb-3">
+                <label for="department" class="form-label font-style">Department<span class="text-danger">
+                        *</span></label>
+                <input type="text" class="form-control" id="department" name="department" ngModel #department="ngModel"
+                    required>
+            </div>
+
+            <button type="submit" class="btn btn-reg" [disabled]="!updateEmp.valid">Update</button>
+            <div class="alert alert-warning" *ngIf="updateEmp.submitted && isUpdateFailed">
+                Update failed! {{errorMsg}}
+            </div>
+        </form>
+        <div class="alert alert-success" *ngIf="isSuccessful">
+            {{msg}}
+        </div>
+    </div>
+</div>

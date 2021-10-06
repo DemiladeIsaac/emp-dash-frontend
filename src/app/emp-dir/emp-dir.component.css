@@ -1,0 +1,15 @@
+.bg-table {
+  background-color: #f12043;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.table-body {
+  color: #ff0833;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.filter-text {
+  color: #ff0833;
+  font-family: "Abril Fatface", cursive;
+}

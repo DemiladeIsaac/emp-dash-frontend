@@ -46,3 +46,24 @@ nav {
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
+
+.white-card {
+  background-color: #fff;
+  padding: 10px;
+  color: #272343;
+  margin: 10px;
+  border-radius: 1em;
+  font-family: "Abril Fatface", cursive;
+  box-shadow: 5px 10px #eeebeb;
+}
+
+.bg-table {
+  background-color: #f12043;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.table-body {
+  color: #ff0833;
+  font-family: "Times New Roman", Times, serif;
+}

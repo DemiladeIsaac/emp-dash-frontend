@@ -1,5 +1,17 @@
-<div class="container">
+<!-- <div class="container">
     <header class="jumbotron">
         <p>{{ content }}</p>
     </header>
+</div> -->
+<div class="row">
+    <div class="col-md-3 background-sidebar d-flex flex-column justify-content-center align-items-center">
+        <p><a [routerLink]="['/dashboard']">Overview</a></p>
+        <p><a routerLink="/dashboard/employees">Employee Directory</a></p>
+        <p><a [routerLink]="['/dashboard/add-emp']">Onboard employee</a></p>
+        <p><a routerLink="/dashboard/update-emp">Update employee info</a></p>
+        <p><a routerLink="/dashboard/del-emp">Delete employee</a></p>
+    </div>
+    <div class="col-md-9 background-dash">
+        <router-outlet></router-outlet>
+    </div>
 </div>

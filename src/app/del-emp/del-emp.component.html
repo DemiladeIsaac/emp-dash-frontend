@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead class="bg-table">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Job</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Department</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody class="table-body">
+        <tr *ngFor="let data of empData">
+            <th scope="row">{{data.name}}</th>
+            <td>{{data.age}}</td>
+            <td>{{data.job_description}}</td>
+            <td>{{data.salary}}</td>
+            <td>{{data.department}}</td>
+            <td>
+                <i class="fas fa-trash" (click)="delEmp(data._id)" style="cursor: pointer;"></i>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

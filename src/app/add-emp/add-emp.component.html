@@ -1,0 +1,82 @@
+<!-- <div class="container">
+    <div class="mt-5 mb-3 white-card">
+         <form #addemp="ngForm" (ngSubmit)="addEmp(addemp.value)" *ngIf="!isSuccessful">
+                <div class="mb-3">
+                    <label for="name" class="form-label font-style">Name <span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="name" name="name" ngModel #name="ngModel"
+                        placeholder="Enter full name" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label font-style">Age<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="age" name="age" ngModel #age="ngModel"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="job_description" class="form-label font-style">Job Description<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="job_description" name="job_description" ngModel #job_description="ngModel" required>
+                </div>
+                <div class="mb-3">
+                    <label for="salary" class="form-label font-style">Salary<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="salary" name="salary" ngModel #salary="ngModel" required>
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label font-style">Department<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="department" name="department" ngModel #department="ngModel" required>
+                </div>
+                 <div class="mb-3">
+                <label for="image" class="form-label">Upload Images</label>
+                <input type="file" class="form-control" id="image" name="image" ngModel #image="ngModel" required>
+            </div>
+    
+                <button type="submit" class="btn btn-reg" [disabled]="!addemp.valid"><span style="font-size: 1em;font-weight: bold;">+</span> Add</button>
+                <div class="alert alert-warning" *ngIf="addemp.submitted && isRegFailed">
+                    Signup failed!<br />{{ errorMsg }}
+                </div>
+            </form>
+            <div class="alert alert-success" *ngIf="isSuccessful">
+                {{message}}
+            </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="mt-5 mb-3 white-card">
+         <form [formGroup]="form" (ngSubmit)="addEmp()" *ngIf="!isSuccessful">
+                <div class="mb-3">
+                    <label for="name" class="form-label font-style">Name <span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="name" formControlName="name"
+                        placeholder="Enter full name" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label font-style">Age<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="age" formControlName="age"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="job_description" class="form-label font-style">Job Description<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="job_description" formControlName="job_description" required>
+                </div>
+                <div class="mb-3">
+                    <label for="salary" class="form-label font-style">Salary<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="salary" formControlName="salary"required>
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label font-style">Department<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="department" formControlName="department" required>
+                </div>
+                
+                 <!-- <div class="mb-3">
+                    <label for="image" class="form-label">Upload Images</label>
+                    <input type="file" class="form-control" id="image" formControlName="imageFile" required>
+                </div> -->
+    
+                <button type="submit" class="btn btn-reg"><span style="font-size: 1em;font-weight: bold;">+</span> Add</button>
+                <div class="alert alert-warning" *ngIf="form.submitted && isRegFailed">
+                    Signup failed!<br />{{ errorMsg }}
+                </div>
+            </form>
+            <div class="alert alert-success" *ngIf="isSuccessful">
+                {{message}}
+            </div>
+    </div>
+</div>
